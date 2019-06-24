@@ -1,0 +1,28 @@
+{
+  "name": "koa-graphql-mongodb",
+  "version": "1.0.0",
+  "description": "Creating a blog site using koa graphql and mongodb and following @indreklasn articles # Introduction This project is used to learn how to create a website using vuejs koa and graphql. It will follow the articles created by @indreklasn but building a basic blog structure.",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darioaxel/koa-graphql-mongodb.git"
+  },
+  "keywords": [],
+  "author": "Darío Ureña",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darioaxel/koa-graphql-mongodb/issues"
+  },
+  "homepage": "https://github.com/darioaxel/koa-graphql-mongodb#readme",
+  "dependencies": {
+    "graphql": "^14.3.1",
+    "koa": "^2.7.0",
+    "koa-graphql": "^0.8.0",
+    "koa-mount": "^4.0.0",
+    "mongoose": "^5.6.0"
+  }
+}
