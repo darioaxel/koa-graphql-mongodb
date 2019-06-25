@@ -1,24 +1,10 @@
-const { buildSchema } = require('graphql');
-const { GraphQLSchema, GraphQLObjectType, GraphQLString} = require('graphql');
-const postGraphQLType =  require('./postType');
-const Post = require('../models/post');
+const { GraphQLSchema } = require('graphql');
 
-// Initial schema needed by GraphQL
-
-const RootQuery = new GraphQLObjectType({
-  name: 'RootQueryType',
-  fields: {
-    post: {
-      type: postGraphQLType,
-      args: { id: { type: GraphQLString }},
-      resolve(parent, args) {
-        return Post.findById(args.id)
-      }
-    }
-  }
-})
+const RootQuery = require('./queries/rootQuery');
+const Mutations = require('./mutations');
 
 
 module.exports = new GraphQLSchema({
-  query: RootQuery
+  query: RootQuery,
+  mutation: Mutations
 });
